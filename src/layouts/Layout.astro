@@ -1,0 +1,119 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+import "@fontsource-variable/m-plus-1";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header>
+      <div class="masthead">
+        <h1>japanese colours • 日本の色</h1>
+        <div class="coloredSquares">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li>gradients</li>
+        <li>•</li>
+        <li>palettes</li>
+      </ul>
+    </nav>
+    <slot />
+  </body>
+  <style is:global lang="scss">
+    :root {
+      --bg-color: #e5e4e6;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body,
+    html {
+      padding: 0;
+      margin: 0;
+    }
+
+    html {
+      font-size: 17px;
+    }
+
+    body {
+      line-height: 1.6;
+      font-family: "M PLUS 1 Variable", sans-serif;
+      background-color: var(--bg-color);
+      padding: 1.5em 3em;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+
+      .masthead {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        .coloredSquares {
+          display: flex;
+          .square {
+            width: 27.5px;
+            height: 27.5px;
+
+            &:nth-child(1) {
+              background-color: #010101;
+            }
+            &:nth-child(2) {
+              background-color: #3a466c;
+            }
+            &:nth-child(3) {
+              background-color: #a8aaa5;
+            }
+          }
+        }
+      }
+    }
+
+    nav {
+      margin-top: 2rem;
+      ul {
+        padding: 0;
+        font-size: 1.4rem;
+        list-style-type: none;
+        font-weight: 300;
+        li {
+          display: inline;
+        }
+
+        li + li {
+          padding-left: 1.8em;
+        }
+      }
+    }
+
+    h1 {
+      margin: 0;
+      font-weight: 300;
+    }
+  </style>
+</html>
