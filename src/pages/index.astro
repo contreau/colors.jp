@@ -2,8 +2,26 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Japanese Colours">
-  <main></main>
+<Layout title="colors.jp">
+  <main>
+    <h2 class="tagline">
+      easily grab <a href="https://www.nuevo.tokyo/" target="_blank"
+        >Nuevo.Tokyo</a
+      >'s curated color palettes for your projects.
+    </h2>
+    <h3><a href="/gradients/">Gradients</a></h3>
+  </main>
 </Layout>
 
-<style></style>
+<style lang="scss">
+  .tagline {
+    font-size: clamp(1rem, 6.5vw, 2.2rem);
+    padding-top: 0.3em;
+  }
+
+  @media (min-width: 1000px) {
+    .tagline {
+      text-align: left;
+    }
+  }
+</style>
