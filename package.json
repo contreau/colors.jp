@@ -1,5 +1,5 @@
 {
-  "name": "japanese-colors",
+  "name": "colors.jp",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,8 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/svelte": "^5.0.3",
     "@fontsource-variable/m-plus-1": "^5.0.15",
     "astro": "^4.1.2",
-    "sass": "^1.69.7"
+    "sass": "^1.69.7",
+    "svelte": "^4.2.9"
   }
 }
