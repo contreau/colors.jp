@@ -1,4 +1,4 @@
-# japanese colours
+# colors.jp
 
 Developer resource offering easy copy-paste of color palettes and gradients curated by [Nuevo.Tokyo](https://www.nuevo.tokyo/).
 
